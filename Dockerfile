@@ -1,8 +1,8 @@
-FROM registry.access.redhat.com/ubi8/ubi-minimal
+FROM python:3.9-slim-buster
 
-RUN microdnf install -y python38 git && \
-  rm -rf /var/cache/microdnf && \
-  mkdir /app
+# RUN microdnf install -y python38 git && \
+#   rm -rf /var/cache/microdnf && \
+RUN  mkdir /app
 
 COPY . /app/
 
